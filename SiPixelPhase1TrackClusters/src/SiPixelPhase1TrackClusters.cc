@@ -46,8 +46,6 @@ enum {  // copy paste from cfy: the only safe way to doit....
   SiPixelPhase1ClustersSizeVsEtaOnTrackInner,
   SiPixelPhase1TrackClustersOnTrackChargeOuter,
   SiPixelPhase1TrackClustersOnTrackChargeInner,
-  SiPixelPhase1TrackClustersOnTrackImpactAngleOuter,
-  SiPixelPhase1TrackClustersOnTrackImpactAngleInner,
 
   SiPixelPhase1TrackClustersOnTrackShapeOuter,
   SiPixelPhase1TrackClustersOnTrackShapeInner,
@@ -216,11 +214,9 @@ void SiPixelPhase1TrackClusters::analyze(const edm::Event& iEvent, const edm::Ev
       if(tkTpl.pxbLadder(id)%2==1) {
         histo[SiPixelPhase1ClustersSizeVsEtaOnTrackOuter].fill(etatk, cluster.sizeY(), id, &iEvent);
         histo[SiPixelPhase1TrackClustersOnTrackChargeOuter].fill(charge, id, &iEvent);
-        histo[SiPixelPhase1TrackClustersOnTrackImpactAngleOuter].fill(impactAngle, id, &iEvent);
       } else {
         histo[SiPixelPhase1ClustersSizeVsEtaOnTrackInner].fill(etatk, cluster.sizeY(), id, &iEvent);
         histo[SiPixelPhase1TrackClustersOnTrackChargeInner].fill(charge, id, &iEvent);
-        histo[SiPixelPhase1TrackClustersOnTrackImpactAngleInner].fill(impactAngle, id, &iEvent);
       }
 
     }
