@@ -333,23 +333,6 @@ SiPixelPhase1TrackClustersOnTrackChargeInner = SiPixelPhase1TrackClustersOnTrack
   title = "Corrected Cluster Charge (OnTrack) inner ladders"
 )
 
-SiPixelPhase1TrackClustersOnTrackImpactAngleOuter = DefaultHistoTrack.clone(
-  name = "impactAngleOuter",
-  title = "Cluster Impact Angle (OnTrack) outer ladders",
-  range_min = 0, range_max = 2, range_nbins = 10,
-  xlabel = "Impact Angle",
-                                                                            
-  specs = VPSet(
-    Specification().groupBy("PXBarrel/PXLayer").save()
-  )
-)
-
-SiPixelPhase1TrackClustersOnTrackImpactAngleInner = SiPixelPhase1TrackClustersOnTrackImpactAngleOuter.clone(
-  name = "impactAngleInner",
-  title = "CLuster Impact Angle (OnTrack) inner ladders"
-)
-
-
 SiPixelPhase1TrackClustersOnTrackShapeOuter = DefaultHistoTrack.clone(
   name = "shapeFilterOuter",
   title = "Shape filter (OnTrack) Outer Ladders",
